@@ -1,18 +1,93 @@
+/* ====== RESET BÁSICO ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 40px;
+  background: linear-gradient(135deg, #4A90E2, #145DA0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
 }
 
-input, button {
-  padding: 8px;
-  margin: 10px 0;
+/* ====== CONTAINER PRINCIPAL ====== */
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
+/* ====== TÍTULO ====== */
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #145DA0;
+}
+
+/* ====== INPUT ====== */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+
+/* ====== BOTÃO ====== */
 button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #145DA0;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.25s;
 }
 
+button:hover {
+  background-color: #0f4a80;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ====== RESULTADO ====== */
 #resultado {
   margin-top: 20px;
   font-size: 18px;
+  color: #333;
 }
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 420px) {
+  .container {
+    padding: 25px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+}
+
