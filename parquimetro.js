@@ -50,6 +50,13 @@ class Interface {
     let valor = this.inputValor.value.replace(",", ".");
     valor = parseFloat(valor);
 
+    if (valor < 0) {
+      this.resultado.textContent = "Valor não pode ser negativo.";
+      this.inputValor.value = "";
+      this.inputValor.focus();
+      return;
+    }
+
     if (isNaN(valor)) {
       this.resultado.textContent = "Por favor, digite um valor válido.";
       return;
@@ -64,6 +71,9 @@ class Interface {
         `Tempo adquirido: <strong>${resposta.tempo} minutos</strong><br>` +
         `Troco: R$ <strong>${resposta.troco}</strong>`;
     }
+
+    this.inputValor.value = "";
+    this.inputValor.focus();
   }
 }
 
