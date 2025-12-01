@@ -6,6 +6,7 @@ class parquimetro {
       { valor: 3.0, tempo: 120 },
     ];
   }
+  
   calcular(valorInserido) {
     if (valorInserido < 1.0) {
       return {
